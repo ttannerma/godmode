@@ -1,2 +1,2 @@
 ﻿# godmode
-A discord bot with basic permissions (kick, ban). Made using discord.js module.
+A discord bot with different commands. Made using discord.js module.
