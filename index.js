@@ -43,7 +43,7 @@ client.on('message', message => {
       return message.channel.send(reply)
     } else command.execute(message, args)
   } catch (error) {
-    client.message.send('Error executing command!')
+    message.channel.send('Error executing command!')
   }
 })
 

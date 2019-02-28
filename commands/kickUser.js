@@ -8,7 +8,16 @@ module.exports = {
     let id = args[0]
     let idLength = id.length
     let realId = id.substring(2, idLength - 1)
-    // console.log(realId)
-    message.channel.members.get(realId).kick(`${args[1]}`).then(message.channel.send(`Kicked user: ${args[1]} Reason: ${args[1]}`)).catch(message.channel.send('Could not kick user.'))
+    let kickReason = args[1]
+    if (kickReason === undefined) {
+      kickReason = ' No reason.'
+    } else {
+      kickReason = ''
+      for (let i = 1; i < args.length; i++) {
+        kickReason += ' ' + args[i]
+      }
+    }
+    message.channel.members.get(realId).kick(`${id}`)
+      .then(message.channel.send(`Kicked user: ${id} Reason: ${kickReason}`))
   }
 }
