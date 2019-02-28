@@ -1,6 +1,7 @@
 module.exports = {
   name: 'kick',
   description: 'Responds to user input when command ping is given',
+  usage: 'user reason',
   guildOnly: true,
   execute (message, args) {
     // guild id 550318319341797388
